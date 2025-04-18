@@ -24,7 +24,7 @@ public class LogRepository {
             """;
 
     private final static String SELECT = """
-                SELECT a.logtime, operation, log_text::VARCHAR
+                SELECT a.logtime, operation, event_log::VARCHAR
                   FROM tt_task_log.v_task_log a
                  WHERE a.id::integer = :task_id
             """;

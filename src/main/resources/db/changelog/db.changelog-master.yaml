@@ -9,3 +9,5 @@ databaseChangeLog:
       file: db/changelog/202504151528__create_log_view.sql
   - include:
       file: db/changelog/202504172126__UPDATE_operation.sql
+  - include:
+      file: db/changelog/202504181011__recreate_log_view.sql

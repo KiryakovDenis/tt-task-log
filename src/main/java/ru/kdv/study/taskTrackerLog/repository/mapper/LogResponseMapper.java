@@ -16,7 +16,7 @@ public class LogResponseMapper implements RowMapper<LogResponse> {
         return LogResponse.builder()
                 .logTime(rs.getObject("logtime", LocalDateTime.class))
                 .logOperation(LogOperation.valueOf(rs.getString("operation")))
-                .logText(rs.getString("log_text"))
+                .logText(rs.getString("event_log"))
                 .build();
     }
 }
