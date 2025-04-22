@@ -30,7 +30,7 @@ public class LogServiceTest {
     private LogService logService;
 
     private final LogLine validLogLine = LogLine.builder()
-            .logOperation(LogOperation.I)
+            .logOperation(LogOperation.INSERT)
             .task(new JSONObject(
                     Task.builder()
                             .id(1L)

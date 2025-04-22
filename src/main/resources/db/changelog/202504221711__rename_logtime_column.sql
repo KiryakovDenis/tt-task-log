@@ -1,0 +1,1 @@
+ALTER TABLE tt_task_log.task_log RENAME COLUMN logtime TO log_time

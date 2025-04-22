@@ -1,13 +1,11 @@
 package ru.kdv.study.taskTrackerLog.service;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.kdv.study.taskTrackerLog.model.LogLine;
-import ru.kdv.study.taskTrackerLog.model.dto.LogResponse;
 import ru.kdv.study.taskTrackerLog.repository.LogRepository;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -20,7 +18,8 @@ public class LogService {
         logRepository.insert(logLine);
     }
 
-    public List<LogResponse> getLog(Long id) {
+    @Transactional(readOnly = true)
+    public JsonNode getLog(Long id) {
         return logRepository.getLog(id);
     }
 }
