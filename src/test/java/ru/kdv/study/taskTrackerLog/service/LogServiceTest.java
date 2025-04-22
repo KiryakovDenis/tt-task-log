@@ -1,7 +1,5 @@
 package ru.kdv.study.taskTrackerLog.service;
 
-import org.apache.coyote.BadRequestException;
-import org.apache.juli.logging.Log;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
