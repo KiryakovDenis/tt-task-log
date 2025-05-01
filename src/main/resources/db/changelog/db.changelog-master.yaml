@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/202504121304__create_schema.sql
+  - include:
+      file: db/changelog/202504121305__create_table.sql
+  - include:
+      file: db/changelog/202504121309__create_index.sql
+  - include:
+      file: db/changelog/202504151528__create_log_view.sql
+  - include:
+      file: db/changelog/202504172126__UPDATE_operation.sql
+  - include:
+      file: db/changelog/202504181011__recreate_log_view.sql
+  - include:
+      file: db/changelog/202504221711__rename_logtime_column.sql
+  - include:
+      file: db/changelog/202504221713__recreate_log_view.sql

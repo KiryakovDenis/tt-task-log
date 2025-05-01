@@ -3,3 +3,26 @@ server:
 spring:
   application:
     name: tt-task-log
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:tt_task_log}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
+  rabbitmq:
+    addresses:
+      - localhost:5672
+    username: ${RMQ_USERNAME:guest}
+    password: ${RMQ_PASSWORD}
+    virtual-host: ttLogHost
+springdoc:
+  swagger-ui:
+    path: swagger-ui
+  open-api:
+    info:
+      title: Task Tracker Service - log
+      description: Микросервис логирования задач системы Task Tracker
+      version: 1.0.0
+app:
+  rabbitmq:
+    queue: ttLogHost-queue
+    exchange: ttLogHost-exchange

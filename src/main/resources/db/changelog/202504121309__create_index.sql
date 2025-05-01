@@ -1,0 +1,1 @@
+CREATE INDEX task_log_task_id_idx ON tt_task_log.task_log(task_id);
